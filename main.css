@@ -1,0 +1,180 @@
+@charset "utf-8";
+body {
+	padding: 0;
+	margin: 0;
+	background-color: black;
+	overflow: none;
+}
+
+h1 {
+	color: black;
+	font-size: 1.4em;
+	float: left;
+	font-family: GABRIOLA;
+}
+
+h2 {
+	float: left;
+	font-family: GABRIOLA;
+}
+
+h5 {
+	color: #FFF8DC;
+	float: left;
+	font-family: sans-serif;
+}
+
+/*************************ССЫЛКИ*************************/
+a {
+	text-decoration: none;
+	outline: none;
+	height: 45px;
+}
+
+/*************************ФОН САЙТА "АВТО-СЛАЙДЕР"*************************/
+.body_slides {
+	float: left;
+	width: 100%;
+    list-style:none;
+    z-index:-2; 
+}
+
+.body_slides li {
+	width: 100%;
+	height: 100%;
+    position: fixed;
+    top:0;
+    left:0;
+    background-repeat: repeat;
+    opacity: 0;
+    animation: anim_slides 23s linear infinite 0s;
+}
+.body_slides li:nth-child(1) {
+	background-image: url("img/first.jpg");
+}
+.body_slides li:nth-child(2) {
+animation-delay: 7.0s;
+background-image: url(img/second.jpg);
+}
+.body_slides li:nth-child(3) {
+animation-delay: 13.0s;
+background-image: url(img/three.jpg);
+background-size: cover; 
+}
+.body_slides li:nth-child(4) {
+	animation-delay: 18.0s;
+	background-image: url(img/four.jpg);
+}
+@keyframes anim_slides {
+0% {opacity:0;}
+6% {opacity:1;}
+24% {opacity:1;}
+30% {opacity:0;}
+100% {opacity:0;}
+}
+/*************************АНИМИРОВАННЫЙ ЛОГОТИП*************************/
+.main {
+	width: 270px;
+	height: 370px;
+	transform: scale(0.55) rotate(-20deg) skew(25deg);
+	margin: 0 auto;
+}
+
+.main img {
+	position: absolute;
+	width: 100%;
+	transition: 0.5s;
+}
+
+.main img:nth-child(4) {
+	transform: translate(125px, -125px);
+	opacity: 1;
+}
+.main img:nth-child(3) {
+	transform: translate(100px, -100px);
+	opacity: .8;
+}
+.main img:nth-child(2) {
+	transform: translate(75px, -75px);
+	opacity: .6;
+}
+.main img:nth-child(1) {
+	transform: translate(50px, -50px);
+	opacity: .4;
+}
+
+.main:hover img {
+	transform: translate(50px, -50px);
+	transition: 500ms;
+}
+
+/*************************ЦЕНТРАЛЬНЫЕ БЛОКИ МЕНЮ*************************/
+.wrapper {
+	width: 100%;
+	height: 45px;
+	border-top: 2px solid silver;
+	margin-bottom: 20%;
+}
+
+.page {
+	width: 100%;
+	max-height: 45px;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	position: relative;
+	justify-items: center;
+	top: -40px;
+}
+
+.wrapper .page article {
+	width: 200px;
+	height: 45px;
+	background-color: #FFF8DC;
+}
+
+.wrapper .page  img {
+	width: 25px;
+	float: left;
+	margin: 3.5%;
+}
+.wrapper .page h1 {
+	margin: 3%;
+}
+
+.wrapper .page .con {
+	width: 200px;
+	height: 120px;
+	background-color: #16161d;
+}
+.wrapper .page .con h5 {
+	opacity: 0;
+	margin-right: 8%;
+}
+.wrapper .page .con:hover h5 {
+	opacity: 1;
+	transition: 600ms;
+	margin-left: 8%;
+}
+/*************************БЛОК С ИНФОРМАЦИЕЙ О ПЕРВОЙ ИГРЕ*************************/
+
+.inf {
+	width: 100%;
+	height: 470px;
+	margin-top: 10%;
+	background-color: #FFF8DC;
+	position: relative;
+	overflow-y: auto;
+	box-sizing: border-box;
+	padding-left: 16%;
+	padding-right: 16%;
+	margin-bottom: 1000px;
+}
+
+.inf:hover {
+	overflow: scroll;
+}
+
+.inf h1 {
+	font-size: 1.9em;
+	border-bottom: 2px solid black;
+}
