@@ -37,7 +37,7 @@ h5 {
 .body_slides li {
 	width: 100%;
 	height: 100%;
-    position: fixed;
+    position: absolute;
     top:0;
     left:0;
     background-repeat: repeat;
@@ -107,7 +107,7 @@ background-size: cover;
 .wrapper {
 	width: 100%;
 	height: 45px;
-	margin-bottom: 20%;
+	margin-bottom: 12%;
 }
 
 .page {
@@ -139,7 +139,7 @@ background-size: cover;
 	width: 200px;
 	height: 120px;
 	background-color: #16161d;
-	margin-top: -1.1%;
+	margin-top: -1.1%; 
 }
 .wrapper .page .con h5 {
 	opacity: 0;
@@ -152,23 +152,19 @@ background-size: cover;
 }
 /*************************БЛОК С ИНФОРМАЦИЕЙ О ПЕРВОЙ ИГРЕ*************************/
 .inf {
-	width: 81.6%;
-	height: 450px;
+	max-height: 400px;
 	margin: 0 auto;
-	background-color: #FFF8DC;
+	margin-top: 15.65%;
+	background-color: white;
 	position: relative;
 	overflow-y: auto;
-	box-sizing: border-box;
 	padding-left: 16%;
 	padding-right: 16%;
-	border: 10px solid transparent;
-	border-image: linear-gradient(to right, transparent 0%, #16161d 100%);
-	border-image-slice: 100;
 }
 
 .inf:hover {
 	overflow: scroll;
- 
+ 	overflow-x: hidden;
 }
 
 .inf h1 {
@@ -178,13 +174,12 @@ background-size: cover;
 /*************************СОЦИАЛЬНЫЕ КНОПКИ*************************/
 .inst {
 	width: 100%;
-	height: 100px;
+	height: 90px;
 	background-color: #16161d;
 	position: relative;
-	margin-top: 10%;
 }
 .inst img {
-	width: 60px;
+	width: 50px;
 	height: cover;
 	margin-left: 16%;
 	margin-top: 1.5%;  
@@ -194,9 +189,9 @@ background-size: cover;
 .game {
 	width: 30%;
 	height: cover;
-	margin-top: 17%;
+	margin-top: 7%;
 	float: left;
-	margin-bottom: 800px;
+	margin-bottom: 600px;
 }
 
 .progame {
@@ -212,7 +207,6 @@ background-size: cover;
 	margin-top: 11%;
 	margin-left: 5%; 
 }
-
 .progame .block2 {
 	margin-left: 15%;
 }
@@ -220,18 +214,36 @@ background-size: cover;
 	margin-left: 25%;
 }
 
-.game h2 {
-	margin: 10%;
-	margin-left: 65%;
+.progame div img {
+	width: 40px;
+	height: 40px;
+	float: left;
+	margin: 2.5%;
+}
+
+.progame div h2 {
+	float: left;
+	margin-left: 20%;
+	color: white;
+}
+
+.fon > .game > h2 {
+	margin-left: 6%;
 	color: white;
 	position: relative;
 }
 
+.fon img {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+}
+
 .sidebar {
 	float: right;
-	width: 29%;
-	height: 300px;
+	width: 28%;
+	height: 270px;
 	background-color: #16161d;
-	margin-top: 20.2%;
+	margin-top: 10.8%;
 	position: relative;
 }
