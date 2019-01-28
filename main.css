@@ -25,11 +25,6 @@ h5 {
 }
 
 /*************************ССЫЛКИ*************************/
-a {
-	text-decoration: none;
-	outline: none;
-	height: 45px;
-}
 
 /*************************ФОН САЙТА "АВТО-СЛАЙДЕР"*************************/
 .body_slides {
@@ -112,7 +107,6 @@ background-size: cover;
 .wrapper {
 	width: 100%;
 	height: 45px;
-	border-top: 2px solid silver;
 	margin-bottom: 20%;
 }
 
@@ -129,7 +123,7 @@ background-size: cover;
 .wrapper .page article {
 	width: 200px;
 	height: 45px;
-	background-color: white;
+	background-color: #FFF8DC;
 }
 
 .wrapper .page  img {
@@ -156,25 +150,87 @@ background-size: cover;
 	margin-left: 8%;
 }
 /*************************БЛОК С ИНФОРМАЦИЕЙ О ПЕРВОЙ ИГРЕ*************************/
-
 .inf {
-	width: 100%;
-	height: 460px;
-	margin-top: 10%;
-	background-color: white;
+	width: 81.6%;
+	height: 450px;
+	margin: 0 auto;
+	background-color: #FFF8DC;
 	position: relative;
 	overflow-y: auto;
 	box-sizing: border-box;
-	padding-left: 18%;
-	padding-right: 18%;
-	margin-bottom: 1000px;
+	padding-left: 16%;
+	padding-right: 16%;
+	border: 10px solid transparent;
+	border-image: linear-gradient(to right, transparent 0%, #16161d 100%);
+	border-image-slice: 100;
 }
 
 .inf:hover {
 	overflow: scroll;
+ 
 }
 
 .inf h1 {
 	font-size: 1.9em;
 	border-bottom: 2px solid black;
+}
+/*************************СОЦИАЛЬНЫЕ КНОПКИ*************************/
+.inst {
+	width: 100%;
+	height: 100px;
+	background-color: #16161d;
+	position: relative;
+	margin-top: 10%;
+}
+.inst img {
+	width: 60px;
+	height: cover;
+	margin-left: 16%;
+	margin-top: 1.5%;  
+}
+
+/*************************БЛОК С ИГРАМИ И САЙДБАР*************************/
+.game {
+	width: 30%;
+	height: cover;
+	margin-top: 17%;
+	float: left;
+	margin-bottom: 800px;
+}
+
+.progame {
+	position: relative;
+}
+
+.progame div {
+	width: 360px;
+	height: 60px;
+	background-color: #16161d;
+	border-top: 2px solid white;
+	border-bottom: 2px solid white;
+	margin-top: 11%;
+	margin-left: 5%; 
+}
+
+.progame .block2 {
+	margin-left: 15%;
+}
+.progame .block3 {
+	margin-left: 25%;
+}
+
+.game h2 {
+	margin: 10%;
+	margin-left: 65%;
+	color: white;
+	position: relative;
+}
+
+.sidebar {
+	float: right;
+	width: 29%;
+	height: 300px;
+	background-color: #16161d;
+	margin-top: 20.2%;
+	position: relative;
 }
