@@ -3,7 +3,7 @@ body {
 	padding: 0;
 	margin: 0;
 	background-color: black;
-	overflow: none;
+	outline: none;
 }
 
 h1 {
@@ -27,6 +27,7 @@ h5 {
 /*************************ССЫЛКИ*************************/
 a {
 	text-decoration: none;
+	position: relative;
 }
 
 /*************************ФОН САЙТА "АВТО-СЛАЙДЕР"*************************/
@@ -223,6 +224,7 @@ background-size: cover;
 	height: 328px;
 	margin-top: 6%;
 	background-color: #16161d;
+	position: relative;
 }
 
 /*************************ФУТЕР (НИЗ САЙТА)*************************/
@@ -248,4 +250,72 @@ footer {
 	height: cover;
 }
 
-/*************************СОЦИАЛЬНЫЕ КНОПКИ*************************/
+/*************************СТРАНИЦА GAMELIST*************************/
+.gamelist {
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	row-gap: 4em;
+}
+
+.gamelist article {
+	width: 200px;
+	height: 200px;
+	background-color: #16161d;
+	margin: 0 auto;
+}
+
+/*************************СТРАНИЦА PROJECTLIST*************************/
+.project p {
+	padding-left: 10em;
+	padding-right: 10em;
+	color: white;
+}
+
+/*************************СТРАНИЦА ВХОДА И РЕГИСТРАЦИИ*************************/
+form {
+	width: 41%;
+	margin-left: 20%;
+	float: left;
+	position: fixed;
+	top: 300px;
+	overflow: hidden;
+}
+
+form input {
+	padding: 1%;
+	float: left;
+	clear: both;
+	margin-bottom: 1%;
+	width: 50%;
+	outline: 0;
+	border: 0;
+
+}
+
+form label {
+	float: left;
+	width: 100%;
+	margin-bottom: 1%;
+	color: #979ca3;
+	font-family: fantasy;
+	font-size: 1em; 
+}
+
+form #send {
+	width: 52%;
+	float: left;
+	background-color: #d80832;
+	border-radius: 5px;
+	cursor: pointer;
+	margin-top: 2%;
+}
+form #send:hover {
+	background-color: #16161d;
+	color: white;
+	transition: 300ms;
+}
+
+form a #send {
+	text-align: center;
+	width: 50%;
+}
