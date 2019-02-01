@@ -1,0 +1,321 @@
+@charset "utf-8";
+body {
+	padding: 0;
+	margin: 0;
+	background-color: black;
+	outline: none;
+}
+
+h1 {
+	color: black;
+	font-size: 1.4em;
+	float: left;
+	font-family: GABRIOLA;
+}
+
+h2 {
+	float: left;
+	font-family: GABRIOLA;
+}
+
+h5 {
+	color: #FFF8DC;
+	float: left;
+	font-family: sans-serif;
+}
+
+/*************************ССЫЛКИ*************************/
+a {
+	text-decoration: none;
+	position: relative;
+}
+
+/*************************ФОН САЙТА "АВТО-СЛАЙДЕР"*************************/
+.body_slides {
+	float: left;
+	width: 100%;
+    list-style:none;
+    z-index:-2;
+}
+
+.body_slides li {
+	width: 100%;
+	height: 100%;
+    position: absolute;
+    top:0;
+    left:0;
+    background-repeat: repeat;
+    opacity: 0;
+    animation: anim_slides 23s linear infinite 0s;
+}
+.body_slides li:nth-child(1) {
+	background-image: url("img/first.jpg");
+}
+.body_slides li:nth-child(2) {
+animation-delay: 7.0s;
+background-image: url(img/second.jpg);
+}
+.body_slides li:nth-child(3) {
+animation-delay: 13.0s;
+background-image: url(img/three.jpg);
+background-size: cover; 
+}
+.body_slides li:nth-child(4) {
+	animation-delay: 18.0s;
+	background-image: url(img/four.jpg);
+}
+@keyframes anim_slides {
+0% {opacity:0;}
+6% {opacity:1;}
+24% {opacity:1;}
+30% {opacity:0;}
+100% {opacity:0;}
+}
+/*************************АНИМИРОВАННЫЙ ЛОГОТИП*************************/
+.main {
+	width: 270px;
+	height: 370px;
+	transform: scale(0.55) rotate(-20deg) skew(25deg);
+	margin: 0 auto;
+}
+
+.main img {
+	position: absolute;
+	width: 100%;
+	transition: 0.5s;
+}
+
+.main img:nth-child(4) {
+	transform: translate(125px, -125px);
+	opacity: 1;
+}
+.main img:nth-child(3) {
+	transform: translate(100px, -100px);
+	opacity: .8;
+}
+.main img:nth-child(2) {
+	transform: translate(75px, -75px);
+	opacity: .6;
+}
+.main img:nth-child(1) {
+	transform: translate(50px, -50px);
+	opacity: .4;
+}
+
+.main:hover img {
+	transform: translate(50px, -50px);
+	transition: 500ms;
+}
+
+/*************************ЦЕНТРАЛЬНЫЕ БЛОКИ МЕНЮ*************************/
+.wrapper {
+	width: 100%;
+	height: 255px;
+	position: relative;
+}
+
+.page {
+	width: 100%;
+	height: 45px;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	justify-items: center;
+	position: absolute;
+}
+
+.wrapper .page a {
+	width: 200px;
+	height: 45px;
+	background-color: #FFF8DC;
+}
+
+.wrapper .page  img {
+	width: 25px;
+	float: left;
+	margin: 3.5%;
+}
+.wrapper .page h1 {
+	margin: 3%;
+}
+
+.wrapper .page .con {
+	width: 200px;
+	height: 120px;
+	background-color: #16161d; 
+}
+.wrapper .page .con h5 {
+	opacity: 0;
+	margin-right: 8%;
+}
+.wrapper .page .con:hover h5 {
+	opacity: 1;
+	transition: 600ms;
+	margin-left: 8%;
+}
+/*************************БЛОК С ИНФОРМАЦИЕЙ О ПЕРВОЙ ИГРЕ*************************/
+.inf {
+	width: 100%;
+	height: 70%;
+	overflow-y: hidden;
+	background-color: white
+}
+
+.inf h2 {
+	padding: 0 16% 0 16%;
+}
+
+
+.inf:hover {
+	overflow: scroll;
+ 	overflow-x: hidden;
+}
+
+.inf h1 {
+	font-size: 1.9em;
+	border-bottom: 2px solid black;
+	margin-left: 16%;
+}
+
+/*************************БЛОК С ИГРАМИ И САЙДБАР*************************/
+.game {
+	width: 100%;
+	height: 100%;
+	background-image: url("img/fons.jpg");
+	background-size: cover;
+	position: relative;
+}
+
+.progame {
+	width: 30%;
+	position: absolute;
+}
+
+.progame div {
+	width: 360px;
+	height: 60px;
+	background-color: #16161d;
+	border-top: 2px solid white;
+	border-bottom: 2px solid white;
+	margin-top: 18%;
+	margin-left: 5%; 
+}
+.progame .block2 {
+	margin-left: 15%;
+}
+.progame .block3 {
+	margin-left: 25%;
+}
+
+.progame div img {
+	width: 40px;
+	height: 40px;
+	float: left;
+	margin: 2.5%;
+}
+.progame div h2 {
+	float: left;
+	margin-left: 10%;
+	color: white;
+}
+
+.sidebar {
+	float: right;
+	width: 26%;
+	height: 328px;
+	margin-top: 6%;
+	background-color: #16161d;
+	position: relative;
+}
+
+/*************************ФУТЕР (НИЗ САЙТА)*************************/
+footer {
+	width: 100%;
+	height: 220px;
+	background-color: #020811;
+	position: relative;
+}
+
+.soc {
+	margin-top: 7%;
+	margin-left: 3%;
+	width: 21%;
+	position: absolute;
+	border: 1px solid transparent;
+	border-image: linear-gradient(to right, transparent 0%, white 100%);
+	border-image-slice: 1;
+}
+.soc img {
+	margin-left: 12%; 
+	width: 29px;
+	height: cover;
+}
+
+/*************************СТРАНИЦА GAMELIST*************************/
+.gamelist {
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	row-gap: 4em;
+}
+
+.gamelist article {
+	width: 200px;
+	height: 200px;
+	background-color: #16161d;
+	margin: 0 auto;
+}
+
+/*************************СТРАНИЦА PROJECTLIST*************************/
+.project p {
+	padding-left: 10em;
+	padding-right: 10em;
+	color: white;
+}
+
+/*************************СТРАНИЦА ВХОДА И РЕГИСТРАЦИИ*************************/
+form {
+	width: 41%;
+	margin-left: 20%;
+	float: left;
+	position: fixed;
+	top: 300px;
+	overflow: hidden;
+}
+
+form input {
+	padding: 1%;
+	float: left;
+	clear: both;
+	margin-bottom: 1%;
+	width: 50%;
+	outline: 0;
+	border: 0;
+
+}
+
+form label {
+	float: left;
+	width: 100%;
+	margin-bottom: 1%;
+	color: #979ca3;
+	font-family: fantasy;
+	font-size: 1em; 
+}
+
+form #send {
+	width: 52%;
+	float: left;
+	background-color: #d80832;
+	border-radius: 5px;
+	cursor: pointer;
+	margin-top: 2%;
+}
+form #send:hover {
+	background-color: #16161d;
+	color: white;
+	transition: 300ms;
+}
+
+form a #send {
+	text-align: center;
+	width: 50%;
+}
